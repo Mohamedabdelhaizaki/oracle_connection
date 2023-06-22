@@ -25,11 +25,12 @@ can use yajra/laravel-oci8 package
 2. open the config/app.php file and add the following line inside the providers:
 'providers' => [
 Yajra\Oci8\Oci8ServiceProvider::class,
+]
 
-],
 3. publish the configuration files by executing the following command:
-php artisan vendor:publish --tag=oracle 
-4. open config/database.php file and locate the oracle array :
+php artisan vendor:publish --tag=oracle
+
+5. open config/database.php file and locate the oracle array :
 'oracle' => [
 'driver'    => 'oracle',
 'tns'       => env('DB_TNS', ''),
@@ -42,8 +43,9 @@ php artisan vendor:publish --tag=oracle
 'prefix'    => env('DB_PREFIX', ''),
 'prefix_schema' => env('DB_SCHEMA_PREFIX', ''),
 'edition'   => env('DB_EDITION', 'ora$base'),
-],
-5. open .env file and add the database configuration
+]
+
+6. open .env file and add the database configuration
 DB_CONNECTION=oracle
 DB_HOST=
 DB_PORT=
